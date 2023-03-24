@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ToDoList
+namespace WordPuzzle
 {
     public class Startup
     {
@@ -27,7 +27,7 @@ namespace ToDoList
         {
             app.UseDeveloperExceptionPage();
             app.UseRouting();
-            app.UseStaticFiles(); //THIS IS NEW
+            app.UseStaticFiles();
 
             app.UseEndpoints(routes =>
             {
