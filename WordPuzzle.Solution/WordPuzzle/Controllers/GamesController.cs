@@ -7,10 +7,18 @@ namespace WordPuzzle.Controllers
 {
   public class GamesController : Controller
   {
-    [HttpGet("/games")]
+    [Route("/games")]
     public ActionResult Index()
     {
       return View();
+    }
+
+    [HttpPost]
+    public ActionResult Game(string userInput)
+    {
+      Game newGame = new Game();
+      newGame.UserInput = userInput;
+      return View(newGame);
     }
   }
 }
