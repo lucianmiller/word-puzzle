@@ -1,16 +1,8 @@
 @using WordPuzzle.Models;
-@model Game
+@model Game;
 
 <h1>Game</h1>
 
-@using (Html.BeginForm("Game", "GamesController", FormMethod.Post))
-{
-  @Html.TextBoxFor(model => model.UserInput)
-  <button type="submit">Guess</button>
+@{
+  Layout = "_Layout";
 }
-
-<!-- <form action="/games" method="post">
-  <label for="userInput">Guess a letter</label>
-  <input id="userInput" name="userInput" type="text">
-  <button type="submit">Guess</button>
-</form> -->
