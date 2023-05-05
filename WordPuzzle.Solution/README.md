@@ -5,8 +5,7 @@
 #### By Lucian Miller
 
 ## Description
-
-
+This game is similar to hang man. Guess a letter and it'll tell you weather it's right or wrong. All words are space themed.
 
 ## Setup/Installation Requirements
 <!-- Dan's Approach, Start at GitHub Page and walk through step steps of downloading and starting up -->
