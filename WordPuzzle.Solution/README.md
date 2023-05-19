@@ -1,6 +1,6 @@
 # Word Puzzle
 
-#### C# Practice for Epicodus, 4/25/2023
+#### C# Practice for Epicodus, 5/19/2023
 
 #### By Lucian Miller
 
@@ -8,7 +8,6 @@
 This game is similar to hang man. Guess a letter and it'll tell you weather it's right or wrong. All words are space themed.
 
 ## Setup/Installation Requirements
-<!-- Dan's Approach, Start at GitHub Page and walk through step steps of downloading and starting up -->
 1.  Navigate to green button named "Code"
 2.  Copy link under HTTPS tab
 3.  In your terminal, type `git clone`, then past the link you copied. Press enter.
@@ -16,12 +15,6 @@ This game is similar to hang man. Guess a letter and it'll tell you weather it's
 5.  Make sure you are in the `WordPuzzle` directory before typing `dotnet build` and `dotnet restore`
 6.  In your terminal, type `dotnet run` into terminal
 7.  Follow on screen directions to play the game
-
-
-# Specs
-
-|Description|Input|Output
-|:--:|:--:|:--:|
 
 ## Known Bugs
 
@@ -36,6 +29,7 @@ lucian.miller185@gmail.com
 Vs code
 git
 C#
+dotnet
 
 ### License
 
