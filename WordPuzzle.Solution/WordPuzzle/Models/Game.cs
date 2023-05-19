@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-// step 5: stop game when 6 incorrect guesses have been guessed or user correctly guesses letter
 // step 6: prevent user from typing more then one letter or unaccepted characters 
 
 namespace WordPuzzle.Models
@@ -12,6 +11,8 @@ namespace WordPuzzle.Models
     public static Game Instance { get; set; }
     public string UserInput { get; set; }
     public string Word { get; set; }
+    public bool Win { get; set; }
+    public bool Lose { get; set; }
     public List<Char> CharList { get; set; } = new List<Char>();
     public List<Char> EmptyList { get; set; } = new List<Char>();
     public List<Char> CorrectList { get; set; } = new List<Char>();
@@ -49,6 +50,7 @@ namespace WordPuzzle.Models
       {
         IncorrectList.Add(guess);
       }
+      EndGameCheck();
     }
 
     private void AddCorrectGuess(char correctGuess)
@@ -62,6 +64,16 @@ namespace WordPuzzle.Models
       }
     }
 
-    private void 
+    private void EndGameCheck()
+    {
+      if (IncorrectList.Count >= 6)
+      {
+        Lose = true;
+      }
+      else if (!EmptyList.Contains('_'))
+      {
+        Win = true;
+      }
+    }
   }
 }

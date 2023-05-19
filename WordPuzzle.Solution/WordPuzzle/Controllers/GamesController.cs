@@ -35,6 +35,18 @@ namespace WordPuzzle.Controllers
       System.Console.WriteLine("Incorrect: " + String.Join(" ", Game.Instance.IncorrectList));
       System.Console.WriteLine(String.Join(" ", Game.Instance.EmptyList));
       System.Console.WriteLine("-----------");
+      if (Game.Instance.Win || Game.Instance.Lose)
+      {
+        Console.WriteLine("Game Over!");
+        if (Game.Instance.Win)
+        {
+          Console.WriteLine("You Win!");
+        }
+        else
+        {
+          Console.WriteLine("You Lose!");
+        }
+      }
       return View("Index");
     }
   }
