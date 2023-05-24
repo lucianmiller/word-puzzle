@@ -2,3 +2,16 @@
 @model Game;
 
 <h1>Game Over!</h1>
+
+@{
+  Layout = "_Layout";
+}
+
+@if (@Model.Win) 
+{
+  <p>Congrats! You Win!</p>
+}
+else
+{
+  <p>You lose! Too bad!</p>
+}
