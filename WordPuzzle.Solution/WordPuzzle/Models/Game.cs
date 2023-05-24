@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-// step 6: prevent user from typing more then one letter or unaccepted characters 
-
 namespace WordPuzzle.Models
 {
   public class Game
@@ -41,16 +39,23 @@ namespace WordPuzzle.Models
 
     public void MakeGuess(char guess)
     {
-      if (Word.Contains(guess)) 
+      if (Char.IsLetter(guess))
       {
-        CorrectList.Add(guess);
-        AddCorrectGuess(guess);
+        if (Word.Contains(guess)) 
+        {
+          CorrectList.Add(guess);
+          AddCorrectGuess(guess);
+        }
+        else
+        {
+          IncorrectList.Add(guess);
+        }
+        EndGameCheck();
       }
       else
       {
-        IncorrectList.Add(guess);
+        Console.WriteLine("Please guess a letter");
       }
-      EndGameCheck();
     }
 
     private void AddCorrectGuess(char correctGuess)

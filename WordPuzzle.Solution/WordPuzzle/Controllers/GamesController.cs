@@ -20,7 +20,7 @@ namespace WordPuzzle.Controllers
         System.Console.WriteLine(String.Join(" ", newGame.EmptyList));
         System.Console.WriteLine("-----------");
       }
-      return View();
+      return View(Game.Instance);
     }
 
     [HttpPost]
@@ -38,16 +38,23 @@ namespace WordPuzzle.Controllers
       if (Game.Instance.Win || Game.Instance.Lose)
       {
         Console.WriteLine("Game Over!");
-        if (Game.Instance.Win)
-        {
-          Console.WriteLine("You Win!");
-        }
-        else
-        {
-          Console.WriteLine("You Lose!");
-        }
+        return View("GameOver", Game.Instance);
+        // if (Game.Instance.Win)
+        // {
+        //   Console.WriteLine("You Win!");
+        // }
+        // else
+        // {
+        //   Console.WriteLine("You Lose!");
+        // }
       }
-      return View("Index");
+      return View("Index", Game.Instance);
+    }
+
+    [HttpGet ("/games/gameover")]
+    public ActionResult GameOver()
+    {
+      return View();
     }
   }
 }
