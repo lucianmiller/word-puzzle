@@ -17,3 +17,9 @@
 </ul> -->
 <h3>Missed Letters:</h3>
 <p>@string.Join(", ", @Model.IncorrectList)</p>
+
+<form action="/games" method="post">
+  <label for="userInput">Guess a letter</label>
+  <input id="userInput" name="userInput" type="text" pattern="[A-Za-z]{1}">
+  <button type="submit">Guess</button>
+</form>

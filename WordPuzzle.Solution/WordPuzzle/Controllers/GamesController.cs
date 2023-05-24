@@ -28,7 +28,7 @@ namespace WordPuzzle.Controllers
     {
       if (char.TryParse(userInput, out char c))
       {
-        Game.Instance.MakeGuess(c);
+        Game.Instance.MakeGuess(Char.ToLower(c));
       }
       System.Console.WriteLine("-----------");
       System.Console.WriteLine("Correct: " + String.Join(" ", Game.Instance.CorrectList));
