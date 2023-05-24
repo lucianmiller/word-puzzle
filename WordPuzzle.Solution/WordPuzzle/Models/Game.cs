@@ -80,5 +80,16 @@ namespace WordPuzzle.Models
         Win = true;
       }
     }
+
+    public void ResetGame()
+    {
+      Instance = null;
+      Win = false;
+      Lose = false;
+      CharList = new List<Char>();
+      EmptyList = new List<Char>();
+      CorrectList = new List<Char>();
+      IncorrectList = new List<Char>();
+    }
   }
 }

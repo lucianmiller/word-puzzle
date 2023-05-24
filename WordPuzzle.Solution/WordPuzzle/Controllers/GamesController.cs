@@ -56,5 +56,12 @@ namespace WordPuzzle.Controllers
     {
       return View();
     }
+
+    [HttpPost("/games/reset")]
+    public ActionResult ResetGame()
+    {
+      Game.Instance.ResetGame();
+      return RedirectToAction("Index");
+    }
   }
 }
