@@ -1,6 +1,6 @@
 # Word Puzzle
 
-#### C# Practice for Epicodus, 5/19/2023
+#### C# Practice for Epicodus, 5/30/2023
 
 #### By Lucian Miller
 
@@ -18,7 +18,7 @@ This game is similar to hang man. Guess a letter and it'll tell you weather it's
 
 ## Known Bugs
 
-Current version doesn't work
+No known bugs as of this version
 
 ## Support and contact details
 
